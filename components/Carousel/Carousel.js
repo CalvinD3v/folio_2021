@@ -47,7 +47,7 @@ const Carousel = (props) => {
             {images.map((src, idx) => (
                 <div key={idx} className={`keen-slider__slide number-slide${idx}`}>
                     {/* <img src={`http://localhost:1337${src.formats.medium.url}`} /> */}
-                    <img src={src.url} style={{width: '100%'}}/>
+                    <img src={src.url} style={{width: '96%'}}/>
 
                 </div>
             ))}

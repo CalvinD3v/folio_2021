@@ -1,4 +1,5 @@
 import React from 'react'
+import AboutCard_New from '../components/AboutCard_New/AboutCard_New'
 import HeroText from '../components/HeroText/HeroText'
 import HeroImg from '../components/Icons/HeroImg'
 import Layout from '../components/Navbar/Layout'
@@ -14,8 +15,9 @@ function about({ categories, home }) {
             <Seo seo={home.seo} />
             <main>
                 <section className={styles.mainContainer}>
-                    <HeroImg />
-                    <HeroText />
+                    {/* <HeroImg />
+                    <HeroText /> */}
+                    <AboutCard_New theme='dark' />
                 </section>
             </main>
         </Layout>

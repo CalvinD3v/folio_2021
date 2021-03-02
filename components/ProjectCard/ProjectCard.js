@@ -9,7 +9,7 @@ function ProjectCard(props) {
 
     return (
         <Link as={`/project/${slug}`} href='/project/[id]'>
-            <a className={styles.p_container}>
+            <div className={styles.p_container}>
                 <div className={styles.imageContainer}>
                     {Start && <span className={styles.p_date}>{Start} • {Finish}</span>}
                     <img
@@ -39,7 +39,7 @@ function ProjectCard(props) {
                 </div>
                 <h4 className={styles.p_mainTitle}>{title}</h4>
                 <h5 className={styles.p_subTitle}>{description}</h5>
-            </a>
+            </div>
         </Link>
 
     )

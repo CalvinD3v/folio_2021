@@ -5,9 +5,18 @@
     aligh-items: center
     justify-content: center
     min-height: 100vh
+    svg
+        position: absolute
+        width: auto
+        height: 80vh
+        left: 0
+        bottom: 0
     +breakpoint(medium)
         flex-direction: column
+        min-height: auto
+
         svg
+            position: relative
             width: 100vw
             height: 400px
             padding: 1em
@@ -24,3 +33,4 @@
     // padding-top: 100px
     +breakpoint(medium)
         flex-direction: column
+        overflow: hidden

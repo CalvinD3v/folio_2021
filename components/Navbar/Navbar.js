@@ -19,17 +19,22 @@ function Navbar({ categories }) {
             </Link>
             <div className={styles.nb_links}>
                 <Link href='/'>
-                    <a className={[router.pathname === '/about' ? styles.nav_link_active : styles.nav_link]}>
+                    <a className={[router.pathname === '/' ? styles.nav_link_active : styles.nav_link]}>
                         About Me
                     </a>
                 </Link>
-                {categories.map((category) => {
+                <Link href='/'>
+                    <a className={[router.pathname === '/' ? styles.nav_link_active : styles.nav_link]}>
+                        Resume
+                    </a>
+                </Link>
+                {/* {categories.map((category) => {
                     return (
                         <Link key={category.id} as={`/category/${category.slug}`} href="/category/[id]">
                             <a className={[router.pathname === category.slug ? styles.nav_link_active : styles.nav_link]}>{category.title}</a>
                         </Link>
                     );
-                })}
+                })} */}
                 <Link href='/'>
                     <a className={[router.pathname === '/contact' ? styles.nav_link_active : styles.nav_link]}>
                         Let's Chat

@@ -14,8 +14,9 @@ function ProjectCard(props) {
                 <div className={styles.imageContainer}>
                     {Start && <span className={styles.p_date}>{Start} • {Finish}</span>}
                     <img
-                        src={`http://localhost:1337${coverImage.url}`}
-                        alt={coverImage.alternativeText}
+                        // src={`http://localhost:1337${coverImage.url}`}
+                        src={coverImage.url}
+                        alt={coverImage.alternativeText | coverImage.name}
                         className={styles.proj_img}
                     />
 
@@ -23,7 +24,8 @@ function ProjectCard(props) {
                         <a className={styles.logoContainer} target="_blank">
                             <div>
                                 <img
-                                    src={company.Logo.url ? `http://localhost:1337${company.Logo.url}` : company.Logo}
+                                    src={company.Logo.url}
+                                    // src={company.Logo.url ? `http://localhost:1337${company.Logo.url}` : company.Logo}
                                     width={'90px'}
                                     height={'auto'}
                                 />

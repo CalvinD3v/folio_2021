@@ -3,7 +3,7 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 
 const Slides = (props) => {
-    const {images, title} = props.content[2]
+    const { images, title } = props.content[2]
     const [pause, setPause] = React.useState(false)
     const timer = React.useRef()
     const [sliderRef, slider] = useKeenSlider({
@@ -39,7 +39,8 @@ const Slides = (props) => {
         <div ref={sliderRef} className="keen-slider customeSlider">
             {images.map((src, idx) => (
                 <div key={idx} className={`keen-slider__slide number-slide${idx}`}>
-                    <img src={`http://localhost:1337${src.formats.medium.url}`} />
+                    {/* <img src={`http://localhost:1337${src.formats.medium.url}`} /> */}
+                    <img src={src.url}  />
                 </div>
             ))}
         </div>

@@ -10,7 +10,8 @@ function ProjectIcons(props) {
                     return (
                         <img 
                             key={i} 
-                            src={`http://localhost:1337${data.url}`}
+                            // src={`http://localhost:1337${data.url}`}
+                            src={data.url}
                             alt={data.alternativeText | data.name}
                             className={styles.pi_iconImg} 
                         />

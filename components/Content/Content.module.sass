@@ -1,0 +1,90 @@
+@import '../../styles/config/mixins'
+
+.imageThing
+    width: 50vw
+    height: auto
+
+.sector 
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+.Container
+    height: 80vh
+    width: 90vw
+    margin-top: 10vh
+    display: flex
+    overflow: hidden
+    align-items: center
+    flex-direction: row
+    justify-content: flex-start
+    margin-bottom: -20vh
+    position: relative
+    +breakpoint(medium)
+        flex-direction: column
+        padding-top: 5vh
+        height: auto
+        margin-top: 0
+
+.heroLink
+    color: #f69420
+
+.Contnet
+    width: 50vw
+    +breakpoint(medium)
+        display: flex
+        width: 90vw
+
+.cc_border    
+    border: 1px solid #f69420
+    padding: 10px 12px
+    border-radius: 50px
+    margin-left: 20px
+    min-width: 25px
+    min-height: 25px
+    +breakpoint(mediumPhone)
+        padding: 10px
+        margin-left: auto
+
+.cc_barBottom
+    width: 100%
+    height: auto
+    background: #333c48
+    padding: 20vh 0
+    +breakpoint(medium)
+        padding: 30vh 0
+
+.co_Header
+    position: relative
+    z-index: 10
+    display: inline-block
+    width: 525px
+    height: 76px
+    font-family: Poppins-SemiBold
+    font-size: 76.8px
+    font-weight: 600
+    line-height: 0.99
+    letter-spacing: normal
+    color: #ffffff
+    margin-left: 7vw
+    +breakpoint(medium)
+        font-size: 50px
+        width: 100vw
+
+// strong:after
+//     content: ''
+//     position: absolute
+//     display: block
+//     height: 37px
+//     width: 60%
+//     background: #f69420
+//     bottom: 7px
+//     top: 40px
+//     right: 0
+//     z-index: -1
+//     +breakpoint(medium)
+//         height: 20px
+//         top: 30px
+//         right: 45px
+//         width: 50%

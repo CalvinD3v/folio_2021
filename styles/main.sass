@@ -1,0 +1,29 @@
+// @import "config/animation"
+@import "config/reset"
+@import "config/typography"
+@import "config/mixins"
+
+html,
+body
+    background: #333C48
+
+a
+    text-decoration: none
+
+[class^="number-slide"], [class*=" number-slide"]
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 50px
+    color: #fff
+    font-weight: 500
+    height: auto
+    max-height: 100vh
+
+// .customeSlider div:nth-child(2)
+//     background: red
+
+.customeSlider img
+    width: 60%
+    +breakpoint(medium)
+        width: 90%

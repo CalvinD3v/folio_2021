@@ -1,0 +1,43 @@
+@import '../../../styles/config/mixins'
+
+.com_innerContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-bottom: 20px
+    min-width: 25vw
+    +breakpoint(medium)
+        margin-left: 20px
+
+.com_companyText
+    color: #333C48
+    padding-left: 15px
+    h4
+        font-family: Poppins-SemiBold
+        font-size: 25px
+    span
+        font-family: Poppins-Regular
+        opacity: .5
+        line-height: 30px
+
+.com_logoImage
+    border: 1px solid #f69420
+    border-radius: 100px
+    width: 110px
+    height: 110px
+    margin-bottom: 20px
+    padding: 5px
+
+.com_credList
+    color: #333C48
+    font-family: Poppins-SemiBold
+    padding-left: 80px
+    .com_listTitle
+        margin-left: 20px
+    .com_projNumber
+        text-align: center
+        background-color: #f69420
+        min-width: 30px
+        height: 30px
+        border-radius: 50px
+        color: #fff

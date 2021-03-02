@@ -1,0 +1,51 @@
+@import '../../styles/config/mixins'
+
+.mainTitle
+    font-family: Poppins-ExtraBold
+    color: #ffffff
+    font-size: 12em
+    text-align: right
+    +breakpoint(medium)
+        font-size: 4.6em
+        line-height: 65px
+        margin-top: -50px
+
+.textContainer
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    width: 60vw
+    margin-left: -10vw
+    padding-right: 100px
+    +breakpoint(medium)
+        width: 100vw
+        margin: auto
+        flex-direction: column
+        padding-right: 1em
+
+.locationTitle
+    color: #ffffff
+    font-family: Poppins-Light
+    font-size: 20px
+
+.signature
+    font-family: ReingttoonDEMO
+    font-size: 25px
+    color: #f69420
+    padding-top: 20vh
+    +breakpoint(medium)
+        padding-top: 30px
+
+.subContainer
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: -60vh
+    padding: 0 10px
+    +breakpoint(medium)
+        flex-direction: column
+        margin: auto
+        width: 100vw
+        padding: 0
+        padding-top: 30px

@@ -1,0 +1,20 @@
+@import '../../styles/config/mixins'
+
+.crd_container
+    display: flex
+    width: 100%
+    +breakpoint(medium)
+        flex-direction: column
+
+.crd_paragrah
+    padding-right: 100px
+    p
+        font-family: Poppins-Regular
+        color: #333c48
+        line-height: 30px
+    +breakpoint(medium)
+        padding-right: 20px
+        padding-left: 20px
+        p
+            line-height: 25px
+            font-size: 15px

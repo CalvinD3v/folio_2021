@@ -1,0 +1,48 @@
+@import '../../styles/config/mixins'
+
+.nb_container
+    width: 100vw
+    display: flex
+    align-items: center
+    flex-direction: row
+    justify-content: space-between
+    padding: 1em 3em
+    +breakpoint(medium)
+        padding: 1em
+        svg
+            padding: 5px
+
+.nav_link
+    color: #ffffff
+    text-decoration: none
+    font-family: Poppins-Regular
+    margin: 0 2em
+
+.nav_link_active
+    color: #f69420
+    text-decoration: none
+    font-family: Poppins-SemiBold
+    margin: 0 2em
+
+.nb_links
+    display: flex
+    align-items: center
+
+.nb_links a
+    display: block
+    +breakpoint(medium)
+        display: none
+
+.footer_container
+    width: 100vw
+    text-align: center
+    padding: 100px 0
+    background: #fff
+
+    p
+        font-family: Poppins-Regular
+        color: #333c48
+
+    +breakpoint(medium)
+        padding: 50px
+

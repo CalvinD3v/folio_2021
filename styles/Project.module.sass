@@ -1,0 +1,80 @@
+@import '../styles/config/mixins'
+
+.proj_container
+    background: #fff
+    +breakpoint(medium)
+        overflow-x: hidden
+
+.proj_credits
+    width: 90vw
+    background-color: #ffffff
+    min-height: 10vh
+    margin: 0 100px
+    padding-top: 100px
+    padding-bottom: 100px
+    +breakpoint(medium)
+        margin: 60px 20px
+
+.proj_credSection
+    margin-left: 200px
+    margin-top: 50px
+    +breakpoint(medium)
+        margin-left: 0px
+        margin-top: 30px
+
+.proj_carouselSection
+    width: 100vw
+    padding: 10vh 0
+    display: flex
+    justify-content: space-between
+    +breakpoint(medium)
+        flex-direction: column
+        padding: 0
+
+.proj_credits2
+    width: 50%
+    margin-left: 160px
+    padding-bottom: 100px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    +breakpoint(medium)
+        width: 100%
+        margin-left: 0px
+        padding-left: calc(30px - 1rem)
+        padding-bottom: 0px
+
+.proj_carousel
+    width: 50%
+    position: relative
+    +breakpoint(medium)
+        width: 100%
+        transform: scale(0.7)
+
+.proj_mock
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 4
+
+.proj_mockBG
+    position: absolute
+    top: -42px
+    left: -80px
+    z-index: 3
+
+.proj_largeMedia
+    height: auto
+    background-color: #333c48
+    display: flex
+    flex-direction: column
+    padding-bottom: 100px
+
+.proj_largeMediaImage
+    width: 100%
+    height: auto
+    padding: 100px
+
+.proj_cmsContainer
+    +breakpoint(medium)
+        padding-left: 30px

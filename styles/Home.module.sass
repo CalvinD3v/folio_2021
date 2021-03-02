@@ -1,0 +1,26 @@
+@import '../styles/config/mixins'
+
+.mainContainer
+    display: flex
+    aligh-items: center
+    justify-content: center
+    min-height: 100vh
+    +breakpoint(medium)
+        flex-direction: column
+        svg
+            width: 100vw
+            height: 400px
+            padding: 1em
+
+.sectionHeader
+    margin: 10vh 0
+    width: 100vw
+
+.projectContainer
+    display: flex
+    flex-direction: row
+    align-items: center
+    flex-wrap: wrap
+    // padding-top: 100px
+    +breakpoint(medium)
+        flex-direction: column

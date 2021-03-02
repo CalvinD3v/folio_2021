@@ -1,0 +1,128 @@
+=ellipsis($width:100%)
+  width: $width
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+=fillScreen()
+  width: 100%
+  height: 100%
+
+=circ($x, $y:null,$r:null)
+  width: $x
+  @if $y == null
+    height: $x
+  @else
+    height: $y
+  @if $r == null
+    border-radius: $x/2
+  @else
+    border-radius: $r
+
+=flex($x)
+  display: flex
+  align-items: $x
+  justify-content: $x
+  flex-wrap: wrap
+
+=breakpoint($point)
+  @if $point == x-small
+    @media (max-width: 380px)
+      @content
+
+  @else if $point == small
+    @media (max-width: 768px)
+      @content
+
+  @else if $point == medium
+    @media (max-width: 992px)
+      @content
+
+  @else if $point == iPadPro
+    @media (max-width: 1024px)
+      @content
+
+  @else if $point == iPad
+    @media (max-width: 768px)
+      @content
+
+  @else if $point == large
+    @media (min-width: 1200px)
+      @content
+
+  @else if $point == x-large
+    @media (min-width: 1824px)
+      @content
+
+  @else if $point == desktop
+    @media (min-width: 768px)
+      @content
+
+  @else if $point == smallPhone
+    @media (max-width: 320px)
+      @content
+
+  @else if $point == iphone678
+    @media (max-width: 375px)
+      @content
+
+  @else if $point == mediumPhone
+    @media (max-width: 414px)
+      @content
+
+  @else if $point == smallerPhone
+    @media (min-height: 555px)
+      @content
+
+  @else if $point == largePhone
+    @media (min-height: 639px)
+      @content
+
+  @else if $point == xPhone
+    @media (min-height: 733px)
+      @content
+
+  @else if $point
+    @media (max-width: $point)
+      @content
+
+=fullScreenBackground($url)
+  background-image: url($url)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+
+=fullScreenBg()
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+
+=centerV()
+  position: absolute
+  transform: translateY(-50%)
+  top: 50%
+
+=centerH()
+  position: absolute
+  transform: translateX(-50%)
+  left: 50%
+
+=centerVH()
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+=grayscaler()
+  transition: all .6s
+  filter: grayscale(1)
+  -webkit-filter: grayscale(1)
+  &:hover
+    transform: scale(1.1)
+    filter: greyscale(0)
+    -webkit-filter: grayscale(0)
+
+=safariOnly
+  @media not all and (min-resolution:.001dpcm)
+    @supports (-webkit-appearance:none)
+      @content

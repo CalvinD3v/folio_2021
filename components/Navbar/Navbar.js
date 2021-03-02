@@ -18,8 +18,8 @@ function Navbar({ categories }) {
                 </a>
             </Link>
             <div className={styles.nb_links}>
-                <Link href='/'>
-                    <a className={[router.pathname === '/' ? styles.nav_link_active : styles.nav_link]}>
+                <Link href='/about'>
+                    <a className={[router.pathname === '/about' ? styles.nav_link_active : styles.nav_link]}>
                         About Me
                     </a>
                 </Link>

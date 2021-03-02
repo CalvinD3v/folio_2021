@@ -8,12 +8,14 @@ function ProjectPallet(props) {
             {
                 color_pallet.map((data, i) => {
                     return (
-                        <img 
-                            key={i} 
-                            src={data.url}
-                            // src={`http://localhost:1337${data.url}`}
+                        <img
+                            key={i}
+                            src={data.url.includes("upload")
+                                ? `http://localhost:1337${data.url}`
+                                : data.url
+                            }
                             alt={data.alternativeText | data.name}
-                            className={styles.pp_iconImg} 
+                            className={styles.pp_iconImg}
                         />
                     )
                 })

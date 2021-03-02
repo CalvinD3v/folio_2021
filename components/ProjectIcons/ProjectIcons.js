@@ -8,12 +8,14 @@ function ProjectIcons(props) {
             {
                 project_icons.map((data, i) => {
                     return (
-                        <img 
-                            key={i} 
-                            // src={`http://localhost:1337${data.url}`}
-                            src={data.url}
+                        <img
+                            key={i}
+                            src={data.url.includes("upload")
+                                ? `http://localhost:1337${data.url}`
+                                : data.url
+                            }
                             alt={data.alternativeText | data.name}
-                            className={styles.pi_iconImg} 
+                            className={styles.pi_iconImg}
                         />
                     )
                 })

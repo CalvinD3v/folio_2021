@@ -1,5 +1,5 @@
-// const baseUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'
-const baseUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'https://folio-2021.herokuapp.com'
+const baseUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'
+// const baseUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'https://folio-2021.herokuapp.com'
 async function fetchQuery(path, params = null) {
     let url
     if (params !== null) {

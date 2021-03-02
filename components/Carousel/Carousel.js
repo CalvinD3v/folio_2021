@@ -3,7 +3,7 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 
 const Carousel = (props) => {
-    const {images, title} = props.content[0]
+    const { images, title } = props.content[0]
     const [pause, setPause] = React.useState(false)
     const timer = React.useRef()
     const [sliderRef, slider] = useKeenSlider({
@@ -42,16 +42,22 @@ const Carousel = (props) => {
     }, [pause, slider])
 
     return (
-        <div ref={sliderRef} className="keen-slider" style={{background: '#f69420',padding: '7px 0', borderRadius: 45},title == 'App Slides' ? {width: 360} : {width: 1080}}>
+        <div ref={sliderRef} className="keen-slider" style={{ background: '#f69420', padding: '7px 0', borderRadius: 45 }, title == 'App Slides' ? { width: 360 } : { width: 1080 }}>
 
             {images.map((src, idx) => (
                 <div key={idx} className={`keen-slider__slide number-slide${idx}`}>
-                    {/* <img src={`http://localhost:1337${src.formats.medium.url}`} /> */}
-                    <img src={src.url} style={{width: '96%'}}/>
+
+                    <img
+                        src={src.url.includes("upload")
+                            ? `http://localhost:1337${src.url}`
+                            : src.url
+                        }
+                        style={{ width: '96%' }}
+                    />
 
                 </div>
             ))}
-            
+
         </div>
     )
 }

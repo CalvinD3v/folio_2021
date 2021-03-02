@@ -40,7 +40,12 @@ const Slides = (props) => {
             {images.map((src, idx) => (
                 <div key={idx} className={`keen-slider__slide number-slide${idx}`}>
                     {/* <img src={`http://localhost:1337${src.formats.medium.url}`} /> */}
-                    <img src={src.url}  />
+                    <img
+                        src={src.url.includes("upload")
+                            ? `http://localhost:1337${src.url}`
+                            : src.url
+                        }
+                    />
                 </div>
             ))}
         </div>

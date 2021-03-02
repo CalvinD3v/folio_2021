@@ -4,7 +4,6 @@ import Link from 'next/link'
 import styles from './ProjectCard.module.sass'
 
 function ProjectCard(props) {
-    console.log(props)
     const { title, description, coverImage, company, slug, Start, Finish } = props
 
 
@@ -14,8 +13,10 @@ function ProjectCard(props) {
                 <div className={styles.imageContainer}>
                     {Start && <span className={styles.p_date}>{Start} • {Finish}</span>}
                     <img
-                        // src={`http://localhost:1337${coverImage.url}`}
-                        src={coverImage.url}
+                        src={coverImage.url.includes("upload")
+                            ? `http://localhost:1337${coverImage.url}`
+                            : coverImage.url
+                        }
                         alt={coverImage.alternativeText | coverImage.name}
                         className={styles.proj_img}
                     />
@@ -25,7 +26,10 @@ function ProjectCard(props) {
                             <div>
                                 <img
                                     src={company.Logo.url}
-                                    // src={company.Logo.url ? `http://localhost:1337${company.Logo.url}` : company.Logo}
+                                    src={company.Logo.url.includes("upload")
+                                        ? `http://localhost:1337${company.Logo.url}`
+                                        : company.Logo.url
+                                    }
                                     width={'90px'}
                                     height={'auto'}
                                 />

@@ -5,7 +5,13 @@ function ImageComp(props) {
   const { url } = props.project_image
   return (
     <div className={styles.Root}>
-      <img src={url}
+      <img
+        src={url}
+        src={url.includes("upload")
+          ? `http://localhost:1337${url}`
+          : url
+        }
+
         className={styles.imgSrc} />
     </div>
   );

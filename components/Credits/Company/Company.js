@@ -8,7 +8,12 @@ export default function Company(props) {
         <a href={Url} target="_blank" className={styles.com_innerContainer}>
                
                 {/* <img className={styles.com_logoImage} src={`http://localhost:1337${Logo.url}`} />  */}
-                <img className={styles.com_logoImage} src={Logo.url} />
+                <img className={styles.com_logoImage} 
+                    src={Logo.url.includes("upload")
+                    ? `http://localhost:1337${Logo.url}`
+                    : Logo.url
+                }
+                />
                 
                 <div className={styles.com_companyText}>
                     <h4>{Title}</h4>

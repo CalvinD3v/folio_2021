@@ -12,15 +12,17 @@ import ProjectPallet from "../../components/ProjectPallet/ProjectPallet";
 import Slides from "../../components/Slides/Slides";
 import PhoneMock from "../../components/PhoneMock/PhoneMock";
 import BG from "../../components/PhoneMock/BG";
+import LaptopMock from "../../components/LaptopMock/LaptopMock";
+import LargeMedia from "../../components/LargeMedia/LargeMedia";
 
 const Project = ({ project, categories }) => {
+    console.log(project)
     const seo = {
         metaTitle: project.title,
         metaDescription: project.description,
         shareImage: project.image,
         project: true,
     };
-    const { title } = project.content[0]
 
     return (
         <Layout categories={categories}>
@@ -35,9 +37,8 @@ const Project = ({ project, categories }) => {
                     </div>
                 </div>
                 <div className={styles.proj_carouselSection}>
-
                     <div className={styles.proj_credits2}>
-                        <SectionHeader title={title} subtitle="Screensshots, App Icons & Color Pallet" />
+                        <SectionHeader title='App Screens' subtitle="Screensshots, App Icons & Color Pallet" />
                         <ProjectIcons {...project} />
                         <ProjectPallet {...project} />
                     </div>
@@ -53,11 +54,28 @@ const Project = ({ project, categories }) => {
                     </div>
 
                 </div>
+
                 <div className={styles.proj_largeMedia}>
                     <div className={styles.proj_cmsContainer}>
                         <SectionHeader title="CMS" subtitle="Content Management System Backend " />
                     </div>
-                    <Slides {...project} />
+                    <div className={styles.proj_Laptop}>
+                        <div className={styles.proj_Laptop_mockBG}>
+                            <LaptopMock />
+                        </div>
+                        <Slides {...project} />
+                    </div>
+
+                    {project.content[3] &&
+                        <div className={styles.proj_cmsContainer}>
+                            <SectionHeader title="Screenshots" subtitle="Content Management System Backend " />
+                        </div>
+                    }
+
+                    {project.content[3] && <LargeMedia {...project} />}
+
+
+
                 </div>
 
 

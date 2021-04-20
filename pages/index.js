@@ -13,6 +13,9 @@ import { fetchAPI } from '../lib/api'
 
 
 const Home = ({ projects, categories, home }) => {
+
+
+
   return (
     <Layout categories={categories}>
       <Seo seo={home.seo} />

@@ -34,7 +34,6 @@
 
 .cta_title
     border: 1px solid #f69420
-    background: #f69420
     border-radius: 100px
     padding: 10px 55px
     font-family: Poppins-Bold
@@ -42,6 +41,10 @@
     font-weight: 300
     line-height: 2.09
     color: #ffffff
+    cursor: pointer
+    &:hover
+        background: #f69420
+        
     +breakpoint(medium)
         margin-right: 18px
         padding: 7px 23px
@@ -110,3 +113,15 @@
 
 .heroLink
     color: #cc995a
+
+
+.backBtn
+    display: flex
+    align-items: center
+    text-decoration: none
+    margin-bottom: 50px
+    p
+        margin-left: 10px
+        font-family: Poppins-Regular
+        text-transform: uppercase
+        color: #ffffff

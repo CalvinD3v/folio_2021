@@ -8,9 +8,9 @@ const Slides = (props) => {
     const timer = React.useRef()
     const [sliderRef, slider] = useKeenSlider({
         duration: 1500,
-        slidesPerView: 1,
+        slidesPerView: 2,
         mode: "free-snap",
-        spacing: 35,
+        spacing: 0,
         centered: true,
         loop: true,
     })
@@ -37,17 +37,18 @@ const Slides = (props) => {
 
     return (
         <div ref={sliderRef} className="keen-slider customeSlider">
-            {images.map((src, idx) => (
-                <div key={idx} className={`keen-slider__slide number-slide${idx}`}>
-                    {/* <img src={`http://localhost:1337${src.formats.medium.url}`} /> */}
-                    <img
-                        src={src.url.includes("upload")
-                            ? `http://localhost:1337${src.url}`
-                            : src.url
-                        }
-                    />
-                </div>
-            ))}
+            {images &&
+                images.map((src, idx) => (
+                    <div key={idx} className={`keen-slider__slide number-slide${idx}`}>
+                        {/* <img src={`http://localhost:1337${src.formats.medium.url}`} /> */}
+                        <img
+                            src={src.url.includes("upload")
+                                ? `http://localhost:1337${src.url}`
+                                : src.url
+                            }
+                        />
+                    </div>
+                ))}
         </div>
     )
 }

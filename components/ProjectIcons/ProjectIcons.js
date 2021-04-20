@@ -5,7 +5,7 @@ function ProjectIcons(props) {
     const { project_icons } = props
     return (
         <div className={styles.pi_container}>
-            {
+            {project_icons &&
                 project_icons.map((data, i) => {
                     return (
                         <img

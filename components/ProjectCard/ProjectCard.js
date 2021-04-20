@@ -30,7 +30,7 @@ function ProjectCard(props) {
                                         ? `http://localhost:1337${company.Logo.url}`
                                         : company.Logo.url
                                     }
-                                    width={'90px'}
+                                    width={'140px'}
                                     height={'auto'}
                                 />
                             </div>
